@@ -1,0 +1,16 @@
+  City Name : <input type="text" [(ngModel)]="cityName">
+  <button (click)="getWeatherByCity()">Search</button>
+  <div *ngFor="let item of items ">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 ">Date : {{item.dt_txt}}</div>
+        <div class="col-lg-6 ">
+          <div class="row-lg-3"> Temp : {{item.main.temp}}</div>
+          <div class="row-lg-3">Min Temp : {{item.main.temp_min}}</div>
+          <div class="row-lg-3">Max Temp : {{item.main.temp_max}}</div>
+          <div class="row-lg-3">Pressure : {{item.main.pressure}}</div>
+          <br><br>
+        </div>
+    </div>
+  </div>
+
